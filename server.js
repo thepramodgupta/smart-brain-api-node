@@ -9,8 +9,8 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
 const app = express();
-// app.use(express.json())
-// app.use(cors());
+app.use(express.json())
+app.use(cors());
 
 // const db = knex({
 //     client: 'mssql',
