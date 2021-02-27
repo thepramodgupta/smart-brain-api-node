@@ -9,15 +9,15 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
 const db = knex({
-    client: 'mssql',
+    client: 'pg',
     connection: {
+        server: '127.0.0.1',
         user: 'pramod',  
-        password: '',  
-        server: '127.0.0.1',  
+        password: '',    
         database: 'smart-brain'
     }
   });
-  
+
 const app = express();
 app.use(express.json())
 app.use(cors());
