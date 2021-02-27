@@ -8,19 +8,21 @@ const signin = require('./controllers/signin')
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+const db = knex({
+    client: 'mssql',
+    connection: {
+        user: 'pramod',  
+        password: '',  
+        server: '127.0.0.1',  
+        database: 'smart-brain'
+    }
+  });
+  
 const app = express();
 app.use(express.json())
 app.use(cors());
 
-// const db = knex({
-//     client: 'mssql',
-//     connection: {
-//         user: 'pramod',  
-//         password: '',  
-//         server: '127.0.0.1',  
-//         database: 'smart-brain'
-//     }
-//   });
+
 
 // app.get('/profile/:id', (req, res) => { profile.handleProfile(req, res, db) });
 
