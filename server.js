@@ -22,14 +22,14 @@ const db = knex({
     }
   });
 
-app.get('/profile/:id', (req, res) => { profile.handleProfile(req, res, db) });
+// app.get('/profile/:id', (req, res) => { profile.handleProfile(req, res, db) });
 
-app.post('/signin', (req,res) => { signin.handleSignin(req, res, db, bcrypt) });
+// app.post('/signin', (req,res) => { signin.handleSignin(req, res, db, bcrypt) });
 
-app.put('/image', (req,res) => { image.handleImage(req, res, db)});
-app.post('/imageurl', (req,res) => { image.handleClarifaiApi(req, res)});
+// app.put('/image', (req,res) => { image.handleImage(req, res, db)});
+// app.post('/imageurl', (req,res) => { image.handleClarifaiApi(req, res)});
 
-app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) });
+// app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) });
 
 app.get('/', (req, res) => {
     res.json('success');
