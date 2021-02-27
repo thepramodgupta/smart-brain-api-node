@@ -36,6 +36,6 @@ app.get('/', (req, res) => {
 });
 
 app.listen(process.env.PORT || 4000,()=>{ 
-    console.log('listening at 4000');
+    console.log(`listening at ${process.env.PORT} `);
 })
 
